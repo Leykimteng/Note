@@ -1,10 +1,10 @@
-#`Scala`
+# `Scala`
 
 declare variable need to be assign  
 Example  
 `var myVar1:Int=0`   
 **Integer cannot be Null**  
-###__*Other* *Variable* *Type*__  
+### __*Other* *Variable* *Type*__  
 
 Type|Example
 ---|---
@@ -13,7 +13,7 @@ Double | `var myDouble:Double=3.14`
 Boolean | `myBoolean:Boolean=true`
 String | `myString=""`  
 
-###Operator
+### Operator
 
 __Example 1__  
 `var res=myInt1+myInt2`  
@@ -23,12 +23,12 @@ __Example 2__
 This work for all because it use the + method that have the ability of overloading the operator of premitive type or object value  
 >`+()` method is the operator overloading
 ---
-###Array  
+### Array  
 __How To Declare Array__  
 `var arr=Array(1,2,3,4,5)`  
 `var arr1 = new Array[Int](5)`  
 
-####Foreach Method of array
+#### Foreach Method of array
 1. For Println each value of array  
 `arr1.foreach(println)` or  `arr1.foreach(println(_)`  
 this will print each value 
@@ -39,7 +39,7 @@ this will print each value
   `arr1.foreach(Uppercase)`  
   print all vaue with all upercase
   ---
-####Filter
+#### Filter
 what is _?  
 `_` = all for all the value in array  
 what is filter  
@@ -47,11 +47,11 @@ filter is the array method that use to create new array with condition
 example  
 `var nums = arr1.filter(_>30)` create new array name nums with value bigger that 30  
 ---
-####Abstract Class 
+#### Abstract Class 
 * can use abstract __with the Class only__ not within the Class  
 * abstract method in scala is simular to Abstract method in java and also can have paramater  
 ---
-####Trait
+#### Trait
 __Trait in Scala = interface in java__  
 Traits are used to share interfaces and fields(_Variable_) between classes.   
 trait method=abstraction of encapsulates method=
@@ -61,11 +61,11 @@ trait method=abstraction of encapsulates method=
 example `trait Test{}`  
 ---
 
-####Object and Class
-#####object 
+#### Object and Class
+##### object 
 is use to defind the static var and method.  
 `static` keyword doesn't support in scala.  
-#####class 
+##### class 
 is used to create the instance   
 __to access the private var and method of the class and the object both class and obj have to be the same name__  
 Example 
@@ -97,16 +97,16 @@ class CompanionTest
  }
   ```
 ---
-####Lamda Expression
+#### Lamda Expression
 is use to create the function and assign to the val(immutable variable) the val variable will become a function  
 Syntax  
 `val FunName = (parameter) => {}`  
 Immutable variable aka val is the read only variable and can assign only one
-####Recursive Function
+#### Recursive Function
 function that call function it self  
 Syntax
 `def a(i:Int){ a(i-1) }`
-####Nested Function
+#### Nested Function
 function inside Function  
 Syntax  
 `def outer():Unit={ def inner():Unit={...} b()}`  
@@ -114,7 +114,7 @@ Syntax
 The inner function can access only in side the outer function  
 The Outer Function can access anywhere  
 
-####Composive Function
+#### Composive Function
 Function that call as the parameter  
 syntax
 ```
@@ -124,7 +124,7 @@ def main(args: Array[String]): Unit = {
     println(addNum(subNum(30,10),subNum(100,50)))
   }
 ```
-####Currying Function
+#### Currying Function
 function that will assign later  
 syntax  
 ```

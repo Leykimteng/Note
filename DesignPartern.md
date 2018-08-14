@@ -1,6 +1,6 @@
-#Design Pattern
+# Design Pattern
 Find the Common problem
-####Prevent Technique
+#### Prevent Technique
 1. Singleton  
     a. Early  
     b. Late/laggy

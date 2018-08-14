@@ -22,7 +22,7 @@ A|B|C
 3. B -> C && AB -> C    hold good  
 4. A -> C && BC -> A    not hold good  
 
-####Attribute Closure
+#### Attribute Closure
 (F+)
     R(A B C)  
     A -> B  
