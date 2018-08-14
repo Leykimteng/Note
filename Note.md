@@ -1,0 +1,137 @@
+#`Scala`
+
+declare variable need to be assign  
+Example  
+`var myVar1:Int=0`   
+**Integer cannot be Null**  
+###__*Other* *Variable* *Type*__  
+
+Type|Example
+---|---
+Float | `var myFloat = 0.0f`  
+Double | `var myDouble:Double=3.14`  
+Boolean | `myBoolean:Boolean=true`
+String | `myString=""`  
+
+###Operator
+
+__Example 1__  
+`var res=myInt1+myInt2`  
+This will work because myint1 and myInt2 is premitive type but it will not work if it is object  
+__Example 2__  
+`var res1=myInt1.+(myInt2)`  
+This work for all because it use the + method that have the ability of overloading the operator of premitive type or object value  
+>`+()` method is the operator overloading
+---
+###Array  
+__How To Declare Array__  
+`var arr=Array(1,2,3,4,5)`  
+`var arr1 = new Array[Int](5)`  
+
+####Foreach Method of array
+1. For Println each value of array  
+`arr1.foreach(println)` or  `arr1.foreach(println(_)`  
+this will print each value 
+2. for $array name  
+ `arr1.foreach(arr1=>println(s"Array=$arr1"))`  
+ print array = and each value  
+3. Uppercase  
+  `arr1.foreach(Uppercase)`  
+  print all vaue with all upercase
+  ---
+####Filter
+what is _?  
+`_` = all for all the value in array  
+what is filter  
+filter is the array method that use to create new array with condition  
+example  
+`var nums = arr1.filter(_>30)` create new array name nums with value bigger that 30  
+---
+####Abstract Class 
+* can use abstract __with the Class only__ not within the Class  
+* abstract method in scala is simular to Abstract method in java and also can have paramater  
+---
+####Trait
+__Trait in Scala = interface in java__  
+Traits are used to share interfaces and fields(_Variable_) between classes.   
+trait method=abstraction of encapsulates method=
+* similar to abstract Class
+* Can extend more trait with `with` keyword 
+* trait class can only implement by only `trait` keyword only  
+example `trait Test{}`  
+---
+
+####Object and Class
+#####object 
+is use to defind the static var and method.  
+`static` keyword doesn't support in scala.  
+#####class 
+is used to create the instance   
+__to access the private var and method of the class and the object both class and obj have to be the same name__  
+Example 
+```
+class CompanionTest
+ {
+   private var id = 20                 //non Static
+   private var name = "Ratanak"        //non Static
+ 
+   def print(): Unit ={
+     println(id+" : "+name)
+     println(CompanionTest.id1+" : "+CompanionTest.name1)  //Access the private static var
+   }
+ }
+ 
+ object CompanionTest
+ {
+   private var id1=30                 //Static
+   private var name1="Chay"           //Static
+   import CompanionTest._             //Import but it doesn't need because it auto import
+ 
+   def print1(): Unit =
+   {
+     val c = new CompanionTest        //create instance of obj
+     c.print()
+     println(id1+" : "+name1)
+     println(c.id+" : "+c.name)  //Access the Instance Private var
+   }
+ }
+  ```
+---
+####Lamda Expression
+is use to create the function and assign to the val(immutable variable) the val variable will become a function  
+Syntax  
+`val FunName = (parameter) => {}`  
+Immutable variable aka val is the read only variable and can assign only one
+####Recursive Function
+function that call function it self  
+Syntax
+`def a(i:Int){ a(i-1) }`
+####Nested Function
+function inside Function  
+Syntax  
+`def outer():Unit={ def inner():Unit={...} b()}`  
+>___Note___  
+The inner function can access only in side the outer function  
+The Outer Function can access anywhere  
+
+####Composive Function
+Function that call as the parameter  
+syntax
+```
+def addNum(a:Int,b:Int):Int= return a+b
+def subNum(a:Int,b:Int):Int= return a-b
+def main(args: Array[String]): Unit = {
+    println(addNum(subNum(30,10),subNum(100,50)))
+  }
+```
+####Currying Function
+function that will assign later  
+syntax  
+```
+def test(a:Int) = (b:Int)=> a+b 
+main(args Array[String]):Unit={
+var a= test(5)(_)      // _ mean any and a is not complete variable
+var b= a(10)           // 10 will go to apply _ and b is become the complete value
+println(b)}            // Output: 15 
+```  
+d
