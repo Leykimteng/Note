@@ -98,10 +98,10 @@ class CompanionTest
   ```
 ---
 #### Lamda Expression
-is use to create the function and assign to the val(immutable variable) the val variable will become a function  
+is use to create the function and assign to the var the val variable will become a function  
 Syntax  
 `val FunName = (parameter) => {}`  
-Immutable variable aka val is the read only variable and can assign only one
+val is Immutable variable aka val is the read only variable and can assign only one
 #### Recursive Function
 function that call function it self  
 Syntax
@@ -134,4 +134,16 @@ var a= test(5)(_)      // _ mean any and a is not complete variable
 var b= a(10)           // 10 will go to apply _ and b is become the complete value
 println(b)}            // Output: 15 
 ```  
-d
+#### Function Signature
+is use the function as the parameter by using the lambda expression   
+Syntax  
+```
+def test(a:()=> Unit, other parameter):Unit=
+{
+a()         //can call function from the parameter
+}
+```
+>___Note___  
+The Lambda Function doesn't work with return keyword
+
+#### 
