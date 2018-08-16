@@ -110,3 +110,37 @@ A|B|C
     AB → C  
     AB → D  
     
+ Example R(A B C D)  
+ ABC → D  
+ AB → CD  
+ A → BCD  
+ 
+ (ABC+) = ABCD  
+ (AC+) = ABCD  
+ (A+) = ABCD  
+ Key is uniquely identify a tuple in a relation  
+ 
+ If i delete some attribute   
+ If there are no problem subtitiute of the key then key is known C.K(Minimal Super Key or candidate key)  
+ Example R(A B C D)  
+ B→ACD  
+ ACD→B  
+ 
+ (B+)= BACD  
+ (ACD+) =ACDB  
+  both can be superkey base on the sinario  
+  
+  Example R(A B C D)  
+  AB → CD  
+  D → A  
+  _______  
+  ↓     |  
+  A B C D  
+  | | ↑ ↑  
+  ------  
+  
+  (AB+) = ABCD  
+  (D+) = DAC
+  (BC+)= BC
+  (DB+) = DABC  
+  
