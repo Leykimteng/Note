@@ -146,4 +146,69 @@ a()         //can call function from the parameter
 >___Note___  
 The Lambda Function doesn't work with return keyword
 
-#### 
+#### Closure
+Creating or Passing variable in anonymous function of the same scope to another function parameter is call Clouser.  
+That can be done only by Lambda Expression.  
+```
+object MoinObj {
+  def main(args: Array[String]): Unit = {
+    var name="KimTeng"
+    var o = () =>
+    {
+      print(name)
+    }
+    var tc = new TestClass
+    tc.test2(o)
+
+    name = "\nHongCH"
+    tc.test2(o)
+  }
+}
+
+```
+>__Note__  
+This is use when you want to pass function like a variable
+
+#### Free variables
+The variables that are used in function but are neither local variables nor formal parameters to the function are called free variables.  
+Example  
+`def fun(m1:Int){// NO USE OF m1
+}`
+so if the m1 is not use it call Free variable
+#### Bound variable
+A bound variable is a variable that was previously free, but has been bound to a specific value or set of values.  
+Example
+`val result = (i:Int) => i * 6`  
+>__Note__   
+__i__ is bound to a new value each time the result is called.
+
+#### Return Function of Lambda
+Lambdo function doesn't need the return keyword to return the value it can pass by only put the value directly.  
+example   
+* `var a = ()=> return 12 `   
+This will show error
+* `var a = ()=> 12 `  
+This doesn't show error and return value 12
+##### How to get the value of lambda expression
+* The value of lambda is access by put the parentheses in front of the variable and if that have the parameter just put inside the parentheses and you will get the value from it and the Return type of it is `:String`.    
+* if you put only the variable name without parentheses it will return with lambda function like this `:()=>String`  
+
+Example Program   
+````
+object MoinObj {
+  def resFun()=
+  {
+    var s = ()=> "Hello"       //create the function
+    s                          // if you put only that var name that you declare as fun it will return that lambda expression 
+    //s()                         if you declare with () it will return the value of that lambda expression
+  }
+  /*
+   ()=>"Hello"                    this will return same as s without parenthese does
+  */
+  def main(args: Array[String]): Unit = {
+    var s= resFun()
+    var str = s
+    print(str)
+    }
+}
+````
