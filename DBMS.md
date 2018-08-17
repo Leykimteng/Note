@@ -133,10 +133,10 @@ A|B|C
   Example R(A B C D)  
   AB → CD  
   D → A  
-  _______  
-  ↓     |  
+   
+  ↓ ------ |  
   A B C D  
-  | | ↑ ↑  
+  | - | - ↑ ↑  
   ------  
   
   (AB+) = ABCD  
@@ -144,3 +144,64 @@ A|B|C
   (BC+)= BC
   (DB+) = DABC  
   
+>__Note__  
+__2NF__ Relation R is in 2NF, If every non-prime attribute of R is fully Functional Dependent on the Candidate key of R.  
+→ No non-prime attribute should be determine by part of candidate key  
+
+R(A B C D)  
+AB → C  
+B → D  
+
+CK = AB  
+Prime Attribute = A,B  
+Non-Prime = C,D  
+
+AB → C  be in 2NF  
+B → C not in 2NF  
+
+R(A B C)
+B → C
+
+CK= AB (in = not CK)  
+B → C   
+P → NP  => Not in 2NF
+
+R(A B C D E)  
+AB → C  
+D → E  
+CD = ABD
+
+AB → C  
+P → NP  
+NO IN 2NF
+D → E     
+P → NP  
+NOT IN 2NF
+DEVIDE IN TO 3
+R1(A B C)
+R2(DE)
+R3(ABD)
+
+AB → C  
+CK → NP  
+D → E  
+CK → NP  
+
+R(A B C D E F G H I J)
+AB → C
+AD → GH
+BD → EF
+A → I
+H → J
+
+CK = ABD  
+AB → C N2NF  
+R1(ABC)   
+AD → GH N2NF  
+R2(ADGHJ)  
+BD → EF N2NF  
+R3(BDEF)  
+A → I N2NF  
+R4(AI)  
+H → J 2NF  
+

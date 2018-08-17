@@ -65,9 +65,39 @@ example `trait Test{}`
 ##### object 
 is use to defind the static var and method.  
 `static` keyword doesn't support in scala.  
+#### Composive Function
+is the function that return the value without the return keyword it return the value or object by put it as the last value directly   
+Example  
+`def addNum(a:Int,b:Int):Int= a+b`
+
 ##### class 
 is used to create the instance   
-__to access the private var and method of the class and the object both class and obj have to be the same name__  
+#### Case Class
+A case class is similar to any other classes except that it also creates the Companion Object. In addition, a case class will automatically create the apply(),  toString(), hashCode and equals() methods for you.  
+
+````
+println("Step 1: How to define a case class to represent a Donut object")
+case class Donut(name: String, price: Double, productCode: Option[Long] = None)
+//In Main
+println("\nStep 2: How to create instances or objects for the Donut case class")
+val vanillaDonut: Donut = Donut("Vanilla Donut", 1.50)
+val glazedDonut: Donut = Donut("Glazed Donut", 2.0)
+println(s"Vanilla Donut = $vanillaDonut")
+println(s"Glazed Donut = $glazedDonut")
+````
+>__Note__
+* You did not have to use the new keyword when creating instances of the Donut case class.
+* The case class will automatically create the Companion Object.
+
+##### Class vs Case Class
+
+#### Singleton
+Singleton Pattern is a a fairly common design pattern when you need exactly one instance of an object.  
+Singleton object is declare like you declare an object
+#### Companion Objects
+* to access the private var and method of the class and the object both class or trait and obj have to be the same name   
+* Both Companoin Class and Object Can access their private fun or variable   
+* The Usage of it is for 
 Example 
 ```
 class CompanionTest
@@ -212,3 +242,5 @@ object MoinObj {
     }
 }
 ````
+
+#### STRING INTERPOLATION
