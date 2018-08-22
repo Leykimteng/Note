@@ -1,4 +1,5 @@
 # `Scala`
+is a functional programming laguage that use concept REPL(Read eval print and loop) and treat every thing as function  
 
 declare variable need to be assign  
 Example  
@@ -73,17 +74,25 @@ Example
 ##### class 
 is used to create the instance   
 #### Case Class
-A case class is similar to any other classes except that it also creates the Companion Object. In addition, a case class will automatically create the apply(),  toString(), hashCode and equals() methods for you.  
-
+* A case class is similar to any other classes except that it also creates the Companion Object. In addition, a case class will automatically create the apply(),  toString(), hashCode and equals() methods for you.  
+* is syntactic sugar for a class that is immutable and decomposable through pattern matching (because they have an apply and unapply methods).   
+* Case classes contain a companion object which holds the apply method. This fact makes possible to instantiate a case class without the new keyword. They also come with some helper methods like the .copy method, that eases the creation of a slightly changed copy from the original.
 ````
-println("Step 1: How to define a case class to represent a Donut object")
-case class Donut(name: String, price: Double, productCode: Option[Long] = None)
-//In Main
-println("\nStep 2: How to create instances or objects for the Donut case class")
-val vanillaDonut: Donut = Donut("Vanilla Donut", 1.50)
-val glazedDonut: Donut = Donut("Glazed Donut", 2.0)
-println(s"Vanilla Donut = $vanillaDonut")
-println(s"Glazed Donut = $glazedDonut")
+case class MyCaseClass(number: Int, text: String, others: List[Int])
+
+val dto = MyCaseClass(3, "text", List.empty)
+dto.copy(number = 5) // will produce an instance equal to the original, with number = 5 instead of 3
+
+val dto2 = MyCaseClass(3, "text", List.empty)
+
+dto == dto2 // will return true even if different references
+
+class MyClass(number: Int, text: String, others: List[Int]) {}
+
+val c1 = new MyClass(1, "txt", List.empty)
+val c2 = new MyClass(1, "txt", List.empty)
+
+c1 == c2 // will return false because they are different references
 ````
 >__Note__
 * You did not have to use the new keyword when creating instances of the Donut case class.

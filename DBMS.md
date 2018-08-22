@@ -88,8 +88,8 @@ A|B|C
  * Deletion if a table have only one tuple and you delete that tuple everything will be delete  
  
  #### First Normal Form
- A relation R in 1NF , If the value in the domain of each attribute of the relation are atomic or only one value is associated with each attribute and the value if not a set of value or list of values.  
- 
+ A relation R in 1NF , If the value in the domain of each attribute of the relation are atomic or only one value is associated with each attribute and the value if not a set of value or list of values.    
+ → Multiple Attribute
  e.No|Ename|Contact
   ---|---|---
   1 | A|{98,99}
@@ -147,6 +147,7 @@ A|B|C
 >__Note__  
 __2NF__ Relation R is in 2NF, If every non-prime attribute of R is fully Functional Dependent on the Candidate key of R.  
 → No non-prime attribute should be determine by part of candidate key  
+→ P → NP = Partial Dependency
 
 R(A B C D)  
 AB → C  
@@ -205,3 +206,101 @@ A → I N2NF
 R4(AI)  
 H → J 2NF  
 
+#### 3NF
+A Relation α → ß is in 3NF if  
+1. It has to be in 2NF
+2. no Transitive Dependency(Reduce The Redundency)  
+
+Example    
+R(A B C)  
+A → B   true  
+B → C   false
+NP → NP   
+
+CK = A  
+R1(B C)  
+R2(A B)  
+
+Example  
+R( A B C D E )  
+A → B  x   (p → NP) x2NF  
+B → E  x   NP → NP x3NF  
+C → D  x   P → NP x2NF  
+
+CK = AC  
+R1(A B E)  
+R2(C D)  
+R3(A C)  
+
+Example  
+R(A B C D E F G H I J )  
+AB → C √  
+A → DE x  
+B → F x  
+F → GH x  
+D → IJ x  
+
+CK = AB  
+R1(A D E I J)    
+R2(B F G H)  
+R3(A B C)  
+
+EXAMPLE  
+R(A B C D E )  
+AB → C  √   
+B → D  X  
+D → E  X  
+
+CK = AB  
+R1(B D E)  (R11(BD) R12(DE))   
+R2(A B C)  
+
+Review  
+1NF → Miltiple Value  
+2NF → Partial Dependency  
+3NF → Transitive Dependency   
+BCNP  
+Super → NP  
+R(A B C)  
+AB → C  
+C → B  
+
+AB = ABC
+C = CB
+
+R1(C B)  
+R2(A C)  
+
+R( A B C D E F G H)  
+AB → C   
+A → DE  
+B → F  
+F → GH  
+
+CK = AB = R   
+
+R(A B C D E)  
+CE → D  
+D → B  
+C → A   
+
+CK = CE  
+R(  A B C D E F)  
+AB → C    3NF 2NF  
+DE → AE  
+E → F  
+
+CK = ABD BCD  
+
+R( A B C  D E)  
+AB → CD  BCNP 3NF   
+D → A    3NF  
+BC → DE   3NF  
+
+CK = AB BC BD 
+
+R(A B C D E )  
+BC → ADE  
+D → B  
+
+CK = BC DC
