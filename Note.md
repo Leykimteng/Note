@@ -256,9 +256,25 @@ object MoinObj {
 
 
 ### Collection
-
+#Immutable
 ![pic](https://i.stack.imgur.com/jJ9Pj.png)
+#Mutable
+![pic](https://www.scala-lang.org/docu/files/collections-api/collections.mutable.png)
 
 hashTree
 
-bitset allow negative values
+bitset allow negative values  
+
+Immutable
+list `:+`=append `+:`=prepend  `::`=Add 2 list `:::`=combline 2 list  
+set & &- + ++ -
+listset can use with ++ - +  
+Map id  + - ++  
+Hashmap = map   
+sequence = list  
+hashset = set   
+Treeset = set with unique and ordering  
+Sortedset triat = treeset  
+Vector simular to list  
+
+mutable += -+ ++= --=
