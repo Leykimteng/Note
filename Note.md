@@ -253,3 +253,12 @@ object MoinObj {
 ````
 
 #### STRING INTERPOLATION
+
+
+### Collection
+
+![pic](https://i.stack.imgur.com/jJ9Pj.png)
+
+hashTree
+
+bitset allow negative values

@@ -7,3 +7,9 @@
 * Client/Server Communication.
 * Internet Communication → web browser/ web server. (Easy to develop & easy lower so attack many lappet)  
 
+Hardware module  
+
+Fortezza 
+
+Cookie (session, authentication,)
+
