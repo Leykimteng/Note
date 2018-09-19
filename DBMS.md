@@ -303,4 +303,7 @@ R(A B C D E )
 BC → ADE  
 D → B  
 
-CK = BC DC
+CK = BC DC  
+
+#Advanced DBMS
+[Lesson](http://www.exploredatabase.com/2016/04/transaction-management-in-database-management-systems.html)

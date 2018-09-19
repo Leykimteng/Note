@@ -13,3 +13,13 @@ Fortezza
 
 Cookie (session, authentication,)
 
+#####1.  Channel Mechanism  
+Top layer of TCP  
+Channel communication  
+Channel Number  
+Port Number  
+Capacity of Channel  2 Byte at a time  
+Bridge between sender to receiver   
+
+
+#### Wireless Network security
