@@ -306,4 +306,7 @@ D → B
 CK = BC DC  
 
 #Advanced DBMS
-[Lesson](http://www.exploredatabase.com/2016/04/transaction-management-in-database-management-systems.html)
+[Lesson](http://www.exploredatabase.com/2016/04/transaction-management-in-database-management-systems.html)  
+serializability : A schedule should be equivalent to serial schedule is called serializable schedule,  
+serializability : --  
+When a schedule s can be Tranform into a schedule s' with a series of steps of non - complextins instince then s and s'are conflict equivalent.  
